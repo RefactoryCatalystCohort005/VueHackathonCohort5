@@ -1,17 +1,15 @@
  <template>
-  <div>
+  <div id="student-card">
     <img src alt />
-    <h4>NAME: </h4><span>Mwanje Mike</span>
-    <p>GENDER:</p><span>Male</span>
-    <p>AGE:</p><span>23</span>
-    <p>NATIONALITY:</p><span>Ugandan</span>
-    <p>ADDRESS:</p><span>Nakawa, Kampala</span>
-    <p>COHORT:</p><span>005</span>
-    <p>INTAKE:</p><span>001</span>
-    <p>EMAIL:</p><span>b.mwanje@student.ciu.ac.ug</span>
-    <p>CONTACT:</p><span>077 211 2233</span>
-
-    
+    <span><b>NAME:</b> Mwanje Mike</span><br />
+    <span><b>GENDER:</b> Male</span><br />
+    <span><b>AGE:</b> 23</span><br />
+    <span><b>NATIONALITY:</b> Ugandan</span><br />
+    <span><b>ADDRESS:</b> Nakawa, Kampala</span><br />
+    <span><b>COHORT:</b> 005</span><br />
+    <span><b>INTAKE:</b> 001</span><br />
+    <span><b>EMAIL:</b> m.mwanje@student.ciu.ac.ug</span><br />
+    <span><b>CONTACT:</b>  211 2233</span><br />    
   </div>
 </template>
 
@@ -22,4 +20,26 @@ export default {
 </script>
 
 <style scoped>
+#student-card {
+        background-color: rgb(243, 244, 245);
+        border-radius: 15px;
+        box-shadow: inset 1px 1px 2px black;
+        min-width: 280px;
+        line-height: 1.5;
+        padding:10px;
+        text-align: left;
+        font-size: 1.5rem;
+        font-weight: 100;
+        margin-bottom: 35px;
+    }
+    #student-card #name{
+        display: flex;
+        justify-content:space-around;
+        font-weight: bold;
+    }
+    b{
+        color: rgb(243, 244, 245);
+        background-color: rgb(58, 184, 173);
+        border-radius: 10px;
+    }
 </style>
