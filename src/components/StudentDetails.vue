@@ -40,7 +40,6 @@ export default {
     b{
         color: rgb(243, 244, 245);
         background-color: rgb(58, 184, 173);
-        font-weight: bold;
         border-radius: 10px;
     }
 </style>
