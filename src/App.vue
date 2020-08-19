@@ -1,10 +1,10 @@
+
 <template>
     <div id="app">
         <div id="StudentsViewDiv">
             <StudentView/>
             <StudentView/>
             <StudentView/>
-            <StudentDetails/>
             <StudentDetails/>
             <StudentDetails/>
         </div>
