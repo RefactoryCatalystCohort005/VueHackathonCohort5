@@ -1,18 +1,31 @@
 <template>
-    <div id="student-card">
-        <img src="" alt="">
-        <h4 id="name">Julius Wasajja</h4>
-        <span><i>Guild President At Refactory</i></span><br/><br />
-        <a href="StudentDetails">
-            <button>VIEW PROFILE</button>
-        </a>
-    </div>
-    
+    <div>
+        <div id="student-card" v-for="student in students" v-bind:key="student.studentId">
+            <img alt="Student Image" src="../assets/logo.png">
+            <h4 id="name">{{student.name}}</h4>
+            <span><i>{{student.role}}</i></span><br/><br />
+            <a href="StudentDetails">
+                <button>VIEW PROFILE</button>
+            </a>
+        </div> 
+    </div>   
 </template>
 
 <script>
 export default {
-    name: 'StudentsView'
+    name: 'StudentsView',
+    data(){
+        return {
+            students: [
+                {studentId: 'STD-001', name: 'Mike Mwanje', institute: 'Refactory', role: 'Student'},
+                {studentId: 'STD-002', name: 'Davies Wabuluka', institute: 'Refactory', role: 'Developer'},
+                {studentId: 'STD-003', name: 'Tsumaiya Nabawanuka', institute: 'Refactory', role: 'Applications Designer'},
+                {studentId: 'STD-004', name: 'Queen Emily', institute: 'Refactory', role: 'Class Representative'},
+                {studentId: 'STD-005', name: 'Isaac Semugenyi', institute: 'Refactory', role: 'Co-facilitator'},
+                {studentId: 'STD-006', name: 'Julius Wasajja', institute: 'Refactory', role: 'Gamer'},
+            ]
+        }
+    }
 }
 </script>
 
@@ -51,3 +64,6 @@ export default {
         font-weight: thin;
     }
 </style>
+    #StudentsViewDiv {
+        display: flex;
+    }
