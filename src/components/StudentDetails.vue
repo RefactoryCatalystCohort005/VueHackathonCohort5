@@ -1,7 +1,7 @@
 <template>
     <div id="StudentsViewDiv">
         <div id="student-card" v-for="student in students" v-bind:key="student.studentId">
-            <img src alt />
+            <img alt="Student Image" src="../../public/avatar.jpeg" /><br />
             <span><b>NAME:</b> {{student.name}}</span><br />
             <span><b>GENDER:</b> {{student.gender}}</span><br />
             <span><b>AGE:</b> {{student.age}}</span><br />
@@ -23,10 +23,10 @@ export default {
         return {
             students: [
                 {studentId: 'STD-001', cohort: '005', intake: '001', age: 23, nationality: 'Ugandan', contact: '211 2233', gender: 'Male', name: 'Mike Mwanje', address: 'Nakawa, Kampala', email: 'm.mwanje@student.ciu.ac.ug', role: 'Student'},
+                {studentId: 'STD-005', cohort: '005', intake: '001', age: 23, nationality: 'Ugandan', contact: '211 2233', gender: 'Male', name: 'Isaac Semugenyi', address: 'Nakawa, Kampala', email: 'm.mwanje@student.ciu.ac.ug', role: 'Co-facilitator'},
                 {studentId: 'STD-002', cohort: '005', intake: '001', age: 23, nationality: 'Ugandan', contact: '211 2233', gender: 'Male', name: 'Davies Wabuluka', address: 'Nakawa, Kampala', email: 'm.mwanje@student.ciu.ac.ug', role: 'Developer'},
                 {studentId: 'STD-003', cohort: '005', intake: '001', age: 23, nationality: 'Ugandan', contact: '211 2233', gender: 'Female', name: 'Tsumaiya Nabawanuka', address: 'Nakawa, Kampala', email: 'm.mwanje@student.ciu.ac.ug', role: 'Applications Designer'},
                 {studentId: 'STD-004', cohort: '005', intake: '001', age: 23, nationality: 'Ugandan', contact: '211 2233', gender: 'Female', name: 'Queen Emily', address: 'Nakawa, Kampala', email: 'm.mwanje@student.ciu.ac.ug', role: 'Class Representative'},
-                {studentId: 'STD-005', cohort: '005', intake: '001', age: 23, nationality: 'Ugandan', contact: '211 2233', gender: 'Male', name: 'Isaac Semugenyi', address: 'Nakawa, Kampala', email: 'm.mwanje@student.ciu.ac.ug', role: 'Co-facilitator'},
                 {studentId: 'STD-006', cohort: '005', intake: '001', age: 23, nationality: 'Ugandan', contact: '211 2233', gender: 'Male', name: 'Julius Wasajja', address: 'Nakawa, Kampala', email: 'm.mwanje@student.ciu.ac.ug', role: 'Gamer'},
             ]
         }
@@ -47,15 +47,13 @@ export default {
         font-weight: 100;
         margin-bottom: 35px;
     }
-    #student-card #name{
-        display: flex;
-        justify-content:space-around;
-        font-weight: bold;
-    }
     b{
         color: rgb(243, 244, 245);
         background-color: rgb(58, 184, 173);
         border-radius: 10px;
+    }
+    img{
+        width: 100%;
     }
     #StudentsViewDiv {
         display: flex;
