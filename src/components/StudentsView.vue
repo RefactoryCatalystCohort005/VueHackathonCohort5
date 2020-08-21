@@ -1,18 +1,31 @@
 <template>
-    <div id="student-card">
-        <img src="" alt="">
-        <h4 id="name">Julius Wasajja</h4>
-        <span><i>Guild President At Refactory</i></span><br/><br />
-        <a href="StudentDetails">
-            <button>VIEW PROFILE</button>
-        </a>
-    </div>
-    
+    <div id="StudentsViewDiv">
+        <div id="student-card" v-for="student in students" v-bind:key="student.studentId">
+            <img alt="Student Image" src="../../public/avatar.jpeg">
+            <h4 id="name">{{student.name}}</h4>
+            <span><i>{{student.role}}</i></span><br/><br />
+            <button>
+                <router-link to='/details'>VIEW PROFILE</router-link>
+            </button>
+        </div> 
+    </div>   
 </template>
 
 <script>
 export default {
-    name: 'StudentsView'
+    name: 'StudentsView',
+    data(){
+        return {
+            students: [
+                {studentId: 'STD-001', name: 'Mike Mwanje', role: 'Student'},
+                {studentId: 'STD-005', name: 'Isaac Semugenyi', role: 'Co-facilitator'},
+                {studentId: 'STD-002', name: 'Davies Wabuluka', role: 'Developer'},
+                {studentId: 'STD-003', name: 'Tsumaiya Nabawanuka', role: 'Applications Designer'},
+                {studentId: 'STD-004', name: 'Queen Emily', role: 'Class Representative'},
+                {studentId: 'STD-006', name: 'Julius Wasajja', role: 'Gamer'},
+            ]
+        }
+    }
 }
 </script>
 
@@ -21,7 +34,7 @@ export default {
         background-color: rgb(243, 244, 245);
         border-radius: 15px;
         box-shadow: inset 1px 1px 2px black;
-        min-width: 280px;
+        min-width: 400px;
         line-height: 1.5;
         padding:10px;
         text-align: center;
@@ -36,18 +49,20 @@ export default {
         font-weight: bold;
     }
     button {
-        display: flex;
-        justify-content:space-around;
         border-radius: 15px;
         font-weight: bold;
         color: rgb(243, 244, 245);
         background-color: rgb(58, 184, 173);
-        margin-left: 25%;
         margin-bottom: 50px;
     }
     span {
         color: rgb(112, 172, 228);
         font-family: Verdana;
         font-weight: thin;
+    }
+    #StudentsViewDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 </style>
