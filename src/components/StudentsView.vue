@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="StudentsViewDiv">
         <div id="student-card" v-for="student in students" v-bind:key="student.studentId">
             <img alt="Student Image" src="../assets/logo.png">
             <h4 id="name">{{student.name}}</h4>
@@ -63,7 +63,9 @@ export default {
         font-family: Verdana;
         font-weight: thin;
     }
-</style>
     #StudentsViewDiv {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
+</style>
